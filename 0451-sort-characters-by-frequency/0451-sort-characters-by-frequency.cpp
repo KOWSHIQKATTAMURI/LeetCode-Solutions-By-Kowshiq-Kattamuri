@@ -10,10 +10,9 @@ public:
             kow.insert(make_pair(it.second, it.first));
         }
         string ans;
-        for(auto it : kow){
-            ans.append(it.first, it.second);
+        for(auto it = kow.rbegin(); it != kow.rend(); it++){
+            ans.append(it -> first, it -> second);
         }
-        reverse(ans.begin(), ans.end());
         return ans;
     }
 };
